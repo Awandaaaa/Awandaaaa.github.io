@@ -33,7 +33,7 @@ const PROFILE_DATA = {
 
   // CV — isi path file atau URL ke CV asli
   // Jika menggunakan file lokal, letakkan di folder assets/cv/
-  cvUrl: "assets/cv/CV.Awanda Rizatur Rohim.pdf",
+  cvUrl: "assets/cv/CV.Awanda Rizatur Rohimm.pdf",
   cvFileName: "CV.Awanda Rizatur Rohim.pdf",
 
   // Foto profil — isi path relatif ke foto di folder assets/
