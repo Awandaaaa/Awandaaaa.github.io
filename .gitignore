@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment
+.env
+.env.*
+
+# Extra directories
+hms/
+
+# Laravel boilerplate (not part of static portfolio)
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+tests/
+artisan
+composer.json
+composer.lock
+phpunit.xml
+vite.config.js
+
+# IDE & OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Build & Cache
+dist/
+.cache/

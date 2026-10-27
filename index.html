@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio profesional Awanda Rizatur Rohim — Junior Backend Developer PHP/Laravel. Menampilkan proyek web dan desktop yang telah dikerjakan.">
+  <meta name="author" content="Awanda Rizatur Rohim">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Awanda Rizatur Rohim — Junior Backend Developer PHP/Laravel">
+  <meta property="og:description" content="Portofolio profesional — Junior Backend Developer PHP/Laravel. Menampilkan proyek web dan desktop yang telah dikerjakan.">
+  
+  <title>Awanda Rizatur Rohim — Junior Backend Developer PHP/Laravel</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%234f8fff%22/><text y=%22.9em%22 x=%22.18em%22 font-size=%2270%22 font-weight=%22bold%22 fill=%22white%22>A</text></svg>">
+  
+  <!-- Google Fonts (optional — site degrades gracefully without them) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ GLOWING MESH & LIGHTS BACKGROUND ============ -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi Utama">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">porto<span>folio</span></a>
+      
+      <div class="navbar__links" id="navbar-links">
+        <a href="#home" class="navbar__link active">Home</a>
+        <a href="#projects" class="navbar__link">Projects</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#skills" class="navbar__link">Skills</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+        <a href="#" class="navbar__cv-btn" id="navbar-cv-btn" download style="display:none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+      
+      <button class="navbar__toggle" id="navbar-toggle" aria-label="Toggle navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__bg-orb hero__bg-orb--blue"></div>
+      <div class="hero__bg-orb hero__bg-orb--purple"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__greeting">Halo, saya</p>
+        <h1 class="hero__name" id="hero-name"></h1>
+        <p class="hero__title" id="hero-title"></p>
+        <p class="hero__description" id="hero-description"></p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            Lihat Proyek
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--secondary" id="hero-contact-btn">
+            Hubungi Saya
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+        <div class="hero__socials" id="hero-socials"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Proyek</span>
+        <h2 class="section__title">Proyek yang Pernah Dikerjakan</h2>
+        <p class="section__subtitle">Kumpulan proyek yang menunjukkan kemampuan dan pengalaman pengembangan.</p>
+      </div>
+      <div class="projects__grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Tentang</span>
+        <h2 class="section__title">Tentang Saya</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__avatar reveal" id="about-avatar"></div>
+        <div class="about__content reveal" id="about-content"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Keahlian</span>
+        <h2 class="section__title">Keahlian Teknis</h2>
+        <p class="section__subtitle">Teknologi yang terverifikasi dari proyek-proyek yang telah dikerjakan.</p>
+      </div>
+      <div class="skills__grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">Kontak</span>
+        <h2 class="section__title">Hubungi Saya</h2>
+        <p class="section__subtitle">Tertarik untuk berdiskusi tentang peluang kerja atau kolaborasi proyek?</p>
+      </div>
+      <div class="contact__grid reveal">
+        <div class="contact__info">
+          <h3>Mari Terhubung</h3>
+          <p>Saya terbuka untuk peluang sebagai Junior Backend Developer PHP/Laravel. Jangan ragu untuk menghubungi melalui kontak di bawah ini.</p>
+          <div class="contact__links" id="contact-links"></div>
+        </div>
+        <div class="contact__cta">
+          <h4>Unduh CV Saya</h4>
+          <p>Lihat riwayat pendidikan, pengalaman proyek, dan keahlian teknis saya secara lengkap.</p>
+          <a href="#" class="btn btn--primary" id="contact-cv-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" id="footer-name"></p>
+      <div class="footer__links">
+        <a href="#home" class="footer__link">Home</a>
+        <a href="#projects" class="footer__link">Projects</a>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#contact" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__socials" id="footer-socials"></div>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT DETAIL MODAL ============ -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detail Proyek">
+    <div class="modal">
+      <div class="modal__header">
+        <h3 class="modal__title" id="modal-title"></h3>
+        <button class="modal__close" onclick="closeModal()" aria-label="Tutup modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal__body" id="modal-body"></div>
+      <div class="modal__footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="data/profile.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="js/canvas-network.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
